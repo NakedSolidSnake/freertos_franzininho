@@ -37,7 +37,7 @@ int8_t driver_gpio_open (const void *object)
 
     gpio_config_t io_conf;
     io_conf.mode = gpio->mode == gpio_output ? GPIO_MODE_OUTPUT : GPIO_MODE_INPUT;
-    io_conf.pin_bit_mask = (1UL << gpio->pin);
+    io_conf.pin_bit_mask = (1ULL << gpio->pin);
     io_conf.intr_type = GPIO_INTR_DISABLE;
     io_conf.pull_down_en = 0;
     io_conf.pull_up_en = 0;
